@@ -74,6 +74,7 @@ html{
     width: 420px;
     padding: 30px 0;
 }
+.gnb>li>a>em{margin-left: 10px;}
 .gnb>li>a>span{transition: all .5s ease 0s;}
 .gnb>li:hover>a>span{
     display: inline-block;
@@ -215,7 +216,44 @@ html{
     height: 30px;
 }
 
-
+/* fullpage_nav */
+.fullpage_nav{
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 23px;
+    height: 190px;
+    top: 50%;
+    right: 74px;
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.fullpage_nav_current{
+    text-align: center;
+    color: #fff;
+}
+.fullpage_nav_progress{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 2px;
+    height: 120px;
+    margin: 16px 0;
+    background-color: rgba(120,120,120,0.2);
+}
+.fullpage_nav_progress_active{
+    display: block;
+    width: 2px;
+    height: calc(100% / 7);
+    background-color:#fff;
+    transition: all .5s ease 0s;
+}
+.fullpage_nav_total{
+    text-align: center;
+    color: #fff;
+}
 /* header */
 header{
     /* border: 1px solid #fff; */
@@ -322,8 +360,28 @@ header .innerFrame .menuOpen{
     transition: opacity .6s ease .6s;
 }
 /* MyVolvoDesign */
+.MyVolvoDesign .designStation{
+    transform: translateX(-100px);
+    transition: all .5s ease 1s;
+    opacity: 0;
+}
+.MyVolvoDesign.on .designStation{
+    transform: translateX(0);
+    opacity: 1;
+}
+.MyVolvoDesign .designTxt{
+    transform: translateX(100px);
+    transition: all .5s ease 1.2s;
+    opacity: 0;
+}
+.MyVolvoDesign.on .designTxt{
+    transform: translateX(0);
+    opacity: 1;
+}
 .MyVolvoDesign{
+    overflow: hidden;
     height: 100vh;
+    width: 100%;
 }
 .MyVolvoDesign .innerFrame{
     display: flex;
@@ -653,7 +711,45 @@ header .innerFrame .menuOpen{
     transform: translateX(-50%);
 }
 /* whyVolvoDiv */
+.whyVolvoDiv.on .whyVolvoDivImg{
+    opacity: 1;
+}
+.whyVolvoDiv .whyVolvoDivImg{
+    opacity: 0;
+    transition: all .5s ease 1s;
+}
+.whyVolvoDiv.on h3{
+    opacity: 1;
+    transform: translateX(0);
+}
+.whyVolvoDiv h3{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all .5s ease 1s;
+}
+.whyVolvoDiv.on .whyVolvoDivTxt li{
+    opacity: 1;
+    transform: translateX(0);
+}
+.whyVolvoDiv .whyVolvoDivTxt li{
+    opacity: 0;
+    transform: translateX(100px);
+}
+.whyVolvoDiv .whyVolvoDivTxt li:nth-of-type(1){transition: all .5s ease 1.1s;}
+.whyVolvoDiv .whyVolvoDivTxt li:nth-of-type(2){transition: all .5s ease 1.2s;}
+.whyVolvoDiv .whyVolvoDivTxt li:nth-of-type(3){transition: all .5s ease 1.3s;}
+.whyVolvoDiv.on span{
+    opacity: 1;
+    transform: translateX(0);
+}
+.whyVolvoDiv span{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all .5s ease 1.4s;
+}
+/*  */
 .whyVolvoDiv{
+    overflow: hidden;
     width: 100%;
     height: 100vh;
     display: flex;

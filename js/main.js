@@ -15,7 +15,7 @@ $(function(){
         $(".model>li").removeClass("on")
         $(this).addClass("on")
     })
-    $(".gnb>li").click(function(){
+    $(".gnb>.event").click(function(){
         $(".gnb>li").removeClass("on")
         $(this).addClass("on")
     })
