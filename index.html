@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./img/volvoSymbol.png"/> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>volvo</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/wheel.js"></script>
+    <script src="./js/modelArray.js"></script>
+    <script src="./js/modelControl.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <div class="hiddenMenuWrap">
+        <div class="hiddenMenu">
+            <div class="innerFrame">
+                <div class="menuTop">
+                    <h1 class="logo">
+                        <a href="#"><img src="./img/volvo_logo_white.svg" alt="볼보 로고"></a>
+                    </h1>
+                    <div class="menuClose">
+                        <img src="./img/menuClose.svg" alt="menuClose">
+                    </div>
+                </div>
+                <ul class="gnb">
+                    <li class="on">
+                        <a href="#"><span></span>모델</a>
+                        <ul class="model">
+                            <li class="on">
+                                <a href="#">Electric<br><span>순수전기</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Crossover</a>
+                                        <ul id="el_cross">
+                                            <!-- <li>
+                                                <a href="#">
+                                                <h4>C40 Recharge</h4>
+                                                <p>세제혜택 후 판매가격 (*보조금 미포함)<br>KRW 68,650,000</p>
+                                                <img src="./img/model/c40-electric.avif" alt="c40">
+                                                </a>
+                                            </li> -->
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">SUV</a>
+                                        <ul id="el_suv">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Plug-in hybrids<br><span>플러그인 하이브리드</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#">SUV</a>
+                                        <ul id="Plug_suv">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sedan</a>
+                                        <ul id="Plug_Sedan">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Mild hybrids<br><span>마일드 하이브리드</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="#">SUV</a>
+                                        <ul id="Mild_suv">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sedan</a>
+                                        <ul id="Mild_Sedan">
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">CROSS COUNTRY</a>
+                                        <ul id="Mild_CROSS">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span></span>나만의 볼보 디자인하기</a></li>
+                    <li>
+                        <a href="#"><span></span>구매하기</a>
+                        <ul>
+                            <li>
+                                <a href="#">PURCHASE</a>
+                                <ul>
+                                    <li><a href="#">시승 신청</a></li>
+                                    <li><a href="#">브로슈어 다운로드</a></li>
+                                    <li><a href="#">패밀리 자동차</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">EXPLORE</a>
+                                <ul>
+                                    <li><a href="#">볼보 라이프스타일 숍</a></li>
+                                    <li><a href="#">라이프스타일 컬렉션(영문)</a></li>
+                                    <li><a href="#">액세서리</a></li>
+                                    <li><a href="#">Top-selling 액세서리 제안</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span></span>전시장 찾기</a></li>
+                    <li>
+                        <a href="#"><span></span>서비스</a>
+                        <ul class="service">
+                            <li>
+                                <a href="#">OWNER INFO</a>
+                                <ul>
+                                    <li><a href="#">볼보 서비스 경험</a></li>
+                                    <li><a href="#">볼보 카스 앱</a></li>
+                                    <li><a href="#">서비스 바이 볼보</a></li>
+                                    <li><a href="#">서비스 센터 안내</a></li>
+                                    <li><a href="#">리콜 정보 및 대상차량 조회</a></li>
+                                    <li><a href="#">지원</a></li>
+                                    <li><a href="#">부품 가격 조회</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">OTHER INFORMATION</a>
+                                <ul>
+                                    <li><a href="#">볼보 오리지널 타이어</a></li>
+                                    <li><a href="#">타이어 에너지 효율 등급</a></li>
+                                    <li><a href="#">볼보 사고수리 서비스</a></li>
+                                    <li><a href="#">주요부품 장착 및 탈거 방법</a></li>
+                                    <li><a href="#">스마트폰 연결</a></li>
+                                    <li><a href="#">볼보 서비스 가이드</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span></span>볼보 셀렉트(인증 중고차)</a></li>
+                    <li>
+                        <a href="#"><span></span>Why Volvo</a>
+                        <ul class="WhyVolvo">
+                            <li>
+                                <a href="#">WHY VOLVO</a>
+                                <ul>
+                                    <li><a href="#">우리의 이야기</a></li>
+                                    <li><a href="#">역사</a></li>
+                                    <li><a href="#">세이프티</a></li>
+                                    <li><a href="#">지속가능성</a></li>
+                                    <li><a href="#">일렉트리피케이션</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">OUR COMPANT</a>
+                                <ul>
+                                    <li><a href="#">채용</a></li>
+                                    <li><a href="#">뉴스 & 이벤트</a></li>
+                                    <li><a href="#">투자자 정보(영문)</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">MORE ABOUT VOLVO</a>
+                                <ul>
+                                    <li><a href="#">뉴스레터 신청</a></li>
+                                    <li><a href="#">전문 테크니션 양성 프로그램</a></li>
+                                    <li><a href="#">기술교육 및 정비자료</a></li>
+                                    <li><a href="#">Experience Volvo Cars</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">MORE</a>
+                                <ul>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Investor Relations</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sns">
+                    <li>
+                        <a href="https://www.facebook.com/volvocarkr/" target="_blank">
+                            <img src="./img/sns_facebook.png" alt="볼보 공식 페이스북 바로가기">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/volvocarkr/" target="_blank">
+                            <img src="./img/sns_instagram.png" alt="볼보 공식 인스타그램 바로가기">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@VolvoCarKorea"target="_blank">
+                            <img src="./img/sns_youtube.png" alt="볼보 공식 유튜브 바로가기">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <header>
+            <div class="innerFrame">
+                <h1 class="logo">
+                    <a href="#"><img src="./img/volvo_logo_white.svg" alt="볼보 로고"></a>
+                </h1>
+                <p class="menuOpen">MENU<img class="menuOpenImg" src="./img/menuOpen.png" alt="menuOpen"></p>
+            </div>
+        </header>
+        <main>
+            <div class="banner content">
+                <video src="./video/c40.webm" muted loop autoplay></video>
+                <div class="bannerTxt">
+                    <div>
+                        <h2>VOLVO 경험하기</h2>
+                        <p>지금 바로 시승 신청해 보세요</p>
+                    </div>
+                    <a href="#">시승 신청하기</a>
+                </div>
+            </div>
+            <div class="MyVolvoDesign content">
+                <div class="innerFrame">
+                    <section class="designStation">
+                        <ul class="designTrain">
+                            <li class="on"><img src="./img/xc60_1.png" alt="크리스탈 화이트"></li>
+                            <li><img src="./img/xc60_2.png" alt="오닉스 블랙"></li>
+                            <li><img src="./img/xc60_3.png" alt="데님블루"></li>
+                            <li><img src="./img/xc60_4.png" alt="퓨전레드"></li>
+                            <li><img src="./img/xc60_5.png" alt="플레티넘그레이"></li>
+                            <li><img src="./img/xc60_6.png" alt="실버던"></li>
+                            <li><img src="./img/xc60_7.png" alt="베이퍼그레이"></li>
+                        </ul>
+                        <ul class="pagination">
+                            <li class="white"></li>
+                            <li class="black"></li>
+                            <li class="blue"></li>
+                            <li class="red"></li>
+                            <li class="platinumGray"></li>
+                            <li class="silver"></li>
+                            <li class="vaporGray"></li>
+                        </ul>
+                    </section>
+                    <section class="designTxt">
+                        <h3>My Volvo Design</h3>
+                        <p>
+                            나만의 볼보 디자인를 디자인 해보세요.<br>
+                            모델을 선택하고 옵션, 패키지 및 스타일로 나만의 볼보를 만들어 보세요.
+                        </p>
+                        <a href="#">디자인하기</a>
+                    </section>
+                </div>
+            </div>
+            <div class="RechargeModel content">
+                <div class="models">
+                    <h3>Recharge<br>Model</h3>
+                    <p>
+                        환경을 생각하는 첨단 기술,<br>우리의 미래를 밝히는 전기차.<br>
+                        지금, 지속 가능한 모빌리티로 나아가는<br>첫걸음을 함께하세요.<br>
+                        더 깨끗하고 똑똑한 미래를 위한 전기차,<br>지금 만나보세요.
+                    </p>
+                </div>
+                <div class="electricImg">
+                    <img src="./img/RechargeModelElectric.avif" alt="electric XC40">
+                </div>
+                <div class="electric">
+                    <h4>Electric</h4>
+                    <p>
+                        볼보의 순수 전기차는<br>주행 거리와 출력에 영향을 주지 않으면서,<br> 
+                        탄소 배출이 없는 주행을 가능하게 합니다.
+                    </p>
+                    <a href="#">자세히 보기</a>
+                </div>
+                <div class="plugInImg">
+                    <img src="./img/RechargeModelplugIn.avif" alt="plugIn XC60">
+                </div> 
+                <div class="plugIn">
+                    <h4>Plug-in hybrids</h4>
+                    <p>
+                        플러그인 하이브리드 모델은 걱정 없는 주행을 위해 <br>
+                        전기 모터와 엔진의 조합으로 동력을 사용합니다.
+                    </p>
+                    <a href="#">자세히 보기</a>
+                </div> 
+            </div>
+            <div class="AllRechargeModel content">
+                <div class="innerFrame">
+                    <h3>All Recharge Model</h3>
+                    <dl class="tabRecharge">
+                        <dt class="tabSuv on">SUV</dt>
+                        <dd>
+                            <ul class="suvModel">
+                                <li>
+                                    <div class="suvList">
+                                        <img id="liImg" src="./img/allRechargeModel/EX30img_h.png" alt="EX30img">
+                                        <h5>EX30 순수 전기차</h5>
+                                        <p>소비자 판매가격<br>KRW 49,450,000</p>
+                                    </div>
+                                    <div class="suvHoverList">
+                                        <img src="./img/allRechargeModel/EX30img.png" alt="EX30img">
+                                        <ul>
+                                            <li><a href="#">자세히 보기</a></li>
+                                            <li><a href="#">상담 신청</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="suvList">
+                                        <img id="liImg" src="./img/allRechargeModel/XC90img_h.png" alt="XC90img">
+                                        <h5>XC90 Recharge</h5>
+                                        <p>소비자 판매가격<br>KRW 115,200,000</p>
+                                    </div>
+                                    <div class="suvHoverList">
+                                        <img src="./img/allRechargeModel/XC90img.png" alt="EX90img">
+                                        <ul>
+                                            <li><a href="#">자세히 보기</a></li>
+                                            <li><a href="#">상담 신청</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="suvList">
+                                        <img id="liImg" src="./img/allRechargeModel/XC60img_h.png" alt="XC60img">
+                                        <h5>XC60 Recharge</h5>
+                                        <p>소비자 판매가격<br>KRW 86,400,000</p>
+                                    </div>        
+                                    <div class="suvHoverList">
+                                        <img src="./img/allRechargeModel/XC60img.png" alt="EX60img">
+                                        <ul>
+                                            <li><a href="#">자세히 보기</a></li>
+                                            <li><a href="#">상담 신청</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="suvList">
+                                        <img id="liImg" src="./img/allRechargeModel/XC40img_h.png" alt="XC40img">
+                                        <h5>XC40 Recharge</h5>
+                                        <p>세제혜택 후 판매가격(보조금 미포함)<br>KRW 67,690,000</p>
+                                    </div>
+                                    <div class="suvHoverList">
+                                        <img src="./img/allRechargeModel/XC40img.png" alt="EX40img">
+                                        <ul>
+                                            <li><a href="#">자세히 보기</a></li>
+                                            <li><a href="#">상담 신청</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt class="tabSedan">Sedan</dt>
+                        <dd>
+                            <ul class="sedanModel">
+                                <li>
+                                    <div class="sedanList">
+                                        <img id="liImg" src="./img/allRechargeModel/S90img_h.png" alt="S90img">
+                                        <h5>S90 Recharge</h5>
+                                        <p>소비자 판매가격<br>KRW 89,900,000</p>
+                                    </div>
+                                    <div class="suvHoverList">
+                                        <img src="./img/allRechargeModel/S90img.png" alt="S90img">
+                                        <ul>
+                                            <li><a href="#">자세히 보기</a></li>
+                                            <li><a href="#">상담 신청</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <span class="dtDeco"></span>
+                    <p>* 차량 인도 전 인상된 세금, 수수료, 환율 등과 같은 당사가 통제할 수 없는 요인으로 변경될 수 있다는 점에 유의하시기 바랍니다. 모든 변경 사항에 대해 안내를 받게 되며 인도 전에는 언제든 취소가 가능합니다.</p>
+                </div>
+            </div>
+            <div class="whyVolvoDiv content">
+                <section class="whyVolvoDivImg">
+                    <img src="./img/whyVolvo.jpg" alt="Why Volvo?">
+                </section>
+                <section class="whyVolvoDivTxt">
+                    <h3>Why Volvo?</h3>
+                    <!-- <span><a href="#">자세히 보기 ></a></span> -->
+                    <ul>
+                        <li>
+                            <h5>Making your life easier</h5>
+                            <p>
+                                A에서 B로 이동하는 새로운 여정을 제안합니다. <br>
+                                원하는 시간에, 원하는 방식으로 볼보를 이용할 수 있습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <h5>Our future is electric</h5>
+                            <p>
+                                볼보의 자동차는 전기 동력을 사용할 수 있습니다. <br>
+                                당신이 일상 생활에서 환경에 미치는 영향을 줄일 수 있도록 돕습니다.
+                            </p>
+                        </li>
+                        <li>
+                            <h5>Protecting what’s important</h5>
+                            <p>
+                                볼보는 지금껏 지켜온 안전에 관한 유산을 자랑스럽게 여깁니다. <br>
+                                우리는 중요한 것을 보호할 수 있는 새로운 방법을 계속해서 혁신해 나갈 것입니다.
+                            </p>
+                        </li>
+                    </ul>
+                    <span><a href="#">자세히 보기</a></span>
+                </section>
+            </div>
+            <div class="news content">
+                <div class="innerFrame">
+                    <h3>NEWS & EVENT</h3>
+                    <p>
+                        볼보의 최신 뉴스와 이벤트 소식을 한눈에 확인하세요. <br>
+                        최신 모델 소식과 특별한 행사 정보가 여러분을 기다리고 있습니다.
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="imgFrame">
+                                    <img src="./img/news_1206.jpg" alt="볼보자동차코리아, 볼보 강릉 전시장 및 서비스센터 신규 오픈">
+                                </div>
+                                <div class="newsTxt">
+                                    <h3>볼보자동차코리아, 볼보 강릉 전시장 및 서비스센터 신규 오픈</h3>
+                                    <p>
+                                        언제 어디서나 최상의 스웨디시 서비스를 제공하기 위한 볼보자동차의 투자!
+                                    </p>
+                                    <span>2023년 12월 6일</span>
+                                </div>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="imgFrame">
+                                    <img src="./img/news_1120.jpg" alt="볼보자동차코리아, EX30 팝업 스토어 ‘UNBOX YOUR EX30’ 네이버 예약 개시">
+                                </div>
+                                <div class="newsTxt">
+                                    <h3>볼보자동차코리아, EX30 팝업 스토어 ‘UNBOX YOUR EX30’ 네이버 예약 개시</h3>
+                                    <p>
+                                        볼보의 새로운 프리미엄 전기 SUV, EX30을 트렌디한 성수동에서 만나다.
+                                    </p>
+                                    <span>2023년 11월 20일</span>
+                                </div>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="imgFrame">
+                                    <img src="./img/news_1117_1.jpg" alt="크로스오버와 SUV의 차이와 알맞은 차를 선택하는 방법">
+                                </div>
+                                <div class="newsTxt">
+                                    <h3>크로스오버와 SUV의 차이와 알맞은 차를 선택하는 방법</h3>
+                                    <p>
+                                        오늘날의 자동차 환경에서 자주 논의되는 두 가지 인기 카테고리는 크로스오버와 SUV입니다.
+                                    </p>
+                                    <span>2023년 11월 17일</span>
+                                </div>
+                                
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="imgFrame">
+                                    <img src="./img/news_1117_2.jpg" alt="볼보자동차코리아, 푸르메재단에 장애어린이 지원사업 기금 3억원 기탁">
+                                </div>
+                                <div class="newsTxt">
+                                    <h3>볼보자동차코리아, 푸르메재단에 장애어린이 지원사업 기금 3억원 기탁</h3>
+                                    <p>
+                                        장애어린이와 청소년의 건강한 이동권을 위한 7년의 동행.
+                                    </p>
+                                    <span>2023년 11월 17일</span>
+                                </div>
+                                
+                            </a>
+                        </li>
+                    </ul>
+                    <span><a href="#">NEWS 더보기</a></span>
+                </div>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+</body>
+</html>

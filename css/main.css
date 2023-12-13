@@ -1,0 +1,809 @@
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
+b,strong{font-weight: inherit}
+i,em,address{text-decoration: none;font-style: inherit;}
+a{color: inherit;text-decoration: none;}
+img{max-width: 100%;}
+/* common */
+html{
+    color: #000;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 20px;
+}
+.innerFrame{
+    width: 85%;
+    margin: 0 auto;
+}
+/* hiddenMenu */
+.hiddenMenuWrap.active{pointer-events: auto;}
+.hiddenMenuWrap{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    pointer-events: none;
+}
+.hiddenMenu.active{
+    opacity: 1;
+    left: 0%;
+}
+.hiddenMenu{
+    position: absolute;
+    opacity: 0;
+    left: 100%;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transition: all .6s ease 0s;
+    overflow: hidden;
+}
+.hiddenMenu.active .innerFrame{opacity: 1;}
+.hiddenMenu .innerFrame{opacity: 0;transition: all .6s ease .6s;}
+.menuTop{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menuTop .logo{
+    height: 16px;
+}
+.menuTop .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.menuTop .menuClose{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.gnb>li:last-of-type>a{padding-bottom: 120px;}
+.gnb>li>a{
+    border-right: 0.5px solid #66666670;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    width: 420px;
+    padding: 30px 0;
+}
+.gnb>li>a>span{transition: all .5s ease 0s;}
+.gnb>li:hover>a>span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 0px 10px 15px 0px;
+    background: #2a609d;
+}
+.gnb>li.on>a{color: #2a609d;}
+.gnb>li.on>ul{opacity: 1;pointer-events: auto;}
+.gnb{
+    position: relative;
+}
+.gnb>li>ul{
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease 0s;
+    position: absolute;
+    top: 0;
+    left: 420px;
+    padding-top: 30px;
+    z-index: 10;
+}
+.gnb .model>li>a{
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    border-left: 4px solid #2a609d00;
+    color: #000;
+}
+.model>li.on>a{
+    color: #2a609d;
+    transition: all .5s ease 0s;
+    border-left: 4px solid #2a609d;
+}
+.model>li>a>span{
+    font-size: 18px;
+    font-weight: lighter;
+}
+.gnb .model>li{
+    width: 420px;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+.model>li.on>ul{opacity: 1;pointer-events: auto;}
+.model>li>ul{
+    position: absolute;
+    top: 30px;
+    left: 420px;
+    width: 800px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease 0s;
+}
+.model>li>ul>li>ul{
+    display: flex;
+}
+.model>li>ul>li>a{
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #2a609d;
+}
+
+.model>li>ul>li>ul>li:hover{
+    background: #f9f9f9;
+}
+.model>li>ul>li>ul>li:hover img{
+    transform: scale(1.1);
+}
+.gnb .model>li>ul>li>ul>li:hover{color: #000;}
+.gnb .model>li>ul>li>ul>li{
+    width: calc(800px / 3);
+    padding: 20px;
+    
+    font-size: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: all .5s ease 0s;
+
+}
+.gnb>li>ul.model>li>ul>li{margin-bottom: 0;}
+.model>li>ul>li>ul>li h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+.model>li>ul>li>ul>li p{
+    font-size: 12px;
+    font-weight: lighter;
+    color: #666;
+    margin: 10px 0;
+}
+.model>li>ul>li>ul>li img{
+    height: 50%;
+    object-fit: contain;
+    transition: all .5s ease 0s;
+}
+.gnb>li>ul>li{
+    margin-left: 70px;
+}
+.gnb>li>ul>li>a{
+    display: inline-block;
+    color: #666;
+    /* font-weight: bold; */
+    margin-bottom: 50px;
+    /* padding-top: 50px; */
+}
+.gnb>li>ul>li>ul>li:hover{
+    color: #2a609d;
+    padding-left: 5px;
+    transform: translateX(5px);
+}
+.gnb>li>ul>li>ul>li{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    transition: all .5s ease 0s;
+}
+.service{display: flex;}
+.service>li{width: 400px;}
+.WhyVolvo{
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    flex-wrap: wrap;
+}
+.WhyVolvo>li{width: 400px;}
+.hiddenMenu.innerFrame{position: relative;}
+.sns{
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 30px;
+}
+
+
+/* header */
+header{
+    /* border: 1px solid #fff; */
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+header .innerFrame{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .innerFrame>.logo{
+    height: 16px;
+}
+header .innerFrame>.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+header .innerFrame .menuOpen{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 115px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+/* main */
+/* banner */
+.banner{
+    height: 100vh;
+    width: 100%;
+    line-height: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.banner>video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .bannerTxt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1.2;
+    color: #fff;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.banner .bannerTxt.on h2{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.banner .bannerTxt h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .6s ease 0s;
+}
+.banner .bannerTxt.on p{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.banner .bannerTxt p{
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .6s ease .3s;
+}
+.banner .bannerTxt a:hover{
+    background: #2a609d;
+    color: #fff;
+    border: 1px solid #2a609d;
+}
+.banner .bannerTxt.on a{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.banner .bannerTxt a{
+    width: 170px;
+    display: inline-block;
+    padding: 10px ;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: center;  
+    font-size: 16px;
+    /* border-radius:10px ;  */
+    transform: translateY(10px);
+    opacity: 0;
+
+    transition: transform .6s ease .6s;
+    transition: opacity .6s ease .6s;
+}
+/* MyVolvoDesign */
+.MyVolvoDesign{
+    height: 100vh;
+}
+.MyVolvoDesign .innerFrame{
+    display: flex;
+    height: 100%;
+}
+.MyVolvoDesign .innerFrame>section{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.designTxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.designTxt>h3{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+.designTxt>p{
+    margin-bottom: 150px;
+    line-height: 3;
+}
+.designTxt>a:hover{
+    background: #2a609d;
+    color: #fff;
+}
+.designTxt>a{
+    width: 200px;
+    display: inline-block;
+    padding: 12px ;
+    border: 1px solid #2a609d;
+    box-sizing: border-box;
+    text-align: center;  
+    font-size: 20px;
+    color: #2a609d;
+    /* border-radius:10px ;   */
+    /* font-size: 25px; */
+    transition: all .3s ease 0s;
+}
+.designTrain{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.designTrain>li.on{opacity: 1;}
+.designTrain>li{
+    position: absolute;
+    left:50% ;
+    top: 50%;
+    transform: translate(-50%,-60%);
+    width: 100%;
+    opacity: 0;
+    transition: all 1s ease 0s;
+}
+.designTrain>li>img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+.MyVolvoDesign .designStation{position: relative;}
+.MyVolvoDesign .pagination{
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+    height: 40px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.MyVolvoDesign .pagination>li{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.MyVolvoDesign .pagination .white{background:#f2f2f2 ;border: 1px solid #333;}
+.MyVolvoDesign .pagination .black{background:#2d2926 ;}
+.MyVolvoDesign .pagination .blue{background:#4f5a78 ;}
+.MyVolvoDesign .pagination .red{background:#bc3d3a ;}
+.MyVolvoDesign .pagination .platinumGray{background:#4c4743 ;}
+.MyVolvoDesign .pagination .silver{background:#d1d1d2 ;}
+.MyVolvoDesign .pagination .vaporGray{background:#a6a7aa ;}
+
+/* RechargeModel */
+.RechargeModel{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "models electricImg electric"
+    "models  plugIn plugInImg";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* align-items: stretch; */
+	/* justify-items: stretch; */
+}
+.models { 
+    grid-area: models; 
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.models>h3{
+    font-size: 60px;
+    margin-bottom: 50px;
+    width: 333px;
+}
+.models>p{
+    line-height: 3;
+    width: 333px;
+
+}
+.electricImg { 
+    grid-area: electricImg; 
+}
+.electricImg>img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.electric { 
+    grid-area: electric; 
+    padding: 50px;
+}
+.electric>h4 {
+    font-size: 40px; 
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.electric>p {
+    line-height: 2.5;
+    margin-bottom: 80px;
+}
+.electric>a:hover {background: #2a609d;color: #fff;}
+.electric>a {
+    width: 160px;
+    display: inline-block;
+    padding: 10px ;
+    border: 1px solid #2a609d;
+    box-sizing: border-box;
+    text-align: center;  
+    font-size: 16px;
+    color: #2a609d;
+    /* border-radius:10px ;  */
+    transition: all .3s ease 0s;
+}
+.plugInImg { 
+    grid-area: plugInImg; 
+}
+.plugInImg>img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.plugIn { 
+    grid-area: plugIn; 
+    padding: 50px;
+    text-align: end;
+
+}
+.plugIn>h4 {
+    font-size: 40px; 
+    font-weight: bold;
+    margin-bottom: 30px;
+    /* text-align: end; */
+}
+.plugIn>p {
+    line-height: 2.5;
+    margin-bottom: 120px;
+}
+.plugIn>a:hover {background: #2a609d;color: #fff;}
+.plugIn>a {
+    width: 160px;
+    display: inline-block;
+    padding: 10px ;
+    border: 1px solid #2a609d;
+    box-sizing: border-box;
+    text-align: center;  
+    font-size: 16px;
+    color: #2a609d;
+    /* border-radius:10px ;  */
+    transition: all .3s ease 0s;
+}
+
+/* AllRechargeModel */
+.AllRechargeModel{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.AllRechargeModel .innerFrame{
+    height: 100%;
+    position: relative;
+}
+.AllRechargeModel .innerFrame>h3{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    padding: 150px 0 50px;
+}
+
+.AllRechargeModel .tabRecharge{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.AllRechargeModel .tabRecharge>dt:first-of-type{
+    margin-right: 30px;
+}
+.AllRechargeModel .tabRecharge>dt.on+dd{
+    opacity: 1;
+    pointer-events: auto;
+}
+.AllRechargeModel .tabRecharge>dt{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.AllRechargeModel .dtDeco{
+    display: inline-block;
+    width: 110px;
+    height: 2px;
+    background: #2a609d;
+    position: absolute;
+    top: 313px;
+    left: 50%;
+    transform: translateX(-118%);
+    transition: all .5s ease 0s;
+
+}
+.AllRechargeModel .tabRecharge>dd{
+    position: absolute;
+    top:70px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease 0s;
+}
+.AllRechargeModel .tabRecharge>dd>.suvModel{
+    display: flex;
+    justify-content: space-between;
+}
+.AllRechargeModel .tabRecharge>dd>.sedanModel{
+    width: 1600px;
+    display: flex;
+    justify-content: center;
+}
+.AllRechargeModel .tabRecharge>dd>ul>li>div>h5{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.AllRechargeModel .tabRecharge>dd>ul>li>div>p{
+    color: #666;
+    text-align: center;
+    font-size: 15px;
+}
+.AllRechargeModel .tabRecharge>dd>ul>li{
+    position: relative;
+    height: 410px;
+    width: 400px;
+}
+.AllRechargeModel .tabRecharge>dd>ul>li:hover .suvHoverList{
+    top:0;
+    opacity: 1;
+}
+.AllRechargeModel .tabRecharge>dd>ul>li:hover .suvList>img{
+    opacity: 0;
+}
+.AllRechargeModel .tabRecharge .suvList>img{
+    opacity: 1;
+    transition: all .5s ease 0s;
+}
+.AllRechargeModel .tabRecharge>dd>ul>li:hover .sedanList>img{
+    opacity: 0;
+}
+.AllRechargeModel .tabRecharge .sedanList>img{
+    opacity: 1;
+    transition: all .5s ease 0s;
+}
+.AllRechargeModel .suvHoverList{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease 0s;
+}
+.AllRechargeModel .suvHoverList>img{
+    margin-bottom: 115px;
+}
+.AllRechargeModel .suvHoverList>ul{
+    display: flex;
+    justify-content: center;
+}
+.AllRechargeModel .suvHoverList>ul>li>a:hover{
+    background: #2a609d;
+    color: #fff;
+}
+.AllRechargeModel .suvHoverList>ul>li>a{
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid #2a609d;
+    /* border-radius: 10px; */
+    cursor: pointer;
+    transition: all .3s ease 0s;
+}
+.AllRechargeModel .suvHoverList>ul>li:first-of-type{
+    margin-right: 20px;
+}
+.AllRechargeModel .innerFrame>p{
+    width: 1220px;
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* whyVolvoDiv */
+.whyVolvoDiv{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.whyVolvoDiv>section{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.whyVolvoDiv .whyVolvoDivImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.whyVolvoDiv .whyVolvoDivTxt{
+    padding: 140px 50px;
+}
+.whyVolvoDiv .whyVolvoDivTxt>h3{
+    display: inline-block;
+    font-size: 60px ;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+.whyVolvoDiv .whyVolvoDivTxt>span>a:hover{
+    color: #fff;
+    background: #2a609d;
+}
+.whyVolvoDiv .whyVolvoDivTxt>span>a{
+    /* font-size: 16px ;
+    color: #2a609d;
+    padding: 20px 0 0 40px; */
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 40px;
+    border: 1px solid #2a609d;
+    /* border-radius: 10px; */
+    cursor: pointer;
+    margin-top: 30px;
+    transition: all .3s ease 0s;
+}
+.whyVolvoDiv .whyVolvoDivTxt ul h5{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.whyVolvoDiv .whyVolvoDivTxt ul p{
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}
+/* news */
+.news {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.news>.innerFrame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.news>.innerFrame>h3{
+    font-size: 60px ;
+    font-weight: bold;
+    padding: 100px 0 30px;
+}
+.news>.innerFrame>p{
+    color: #666;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    text-align: center;
+}
+.news>.innerFrame>span>a:hover{
+    color: #fff;
+    background: #2a609d;
+}
+.news>.innerFrame>span>a{
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 40px;
+    border: 1px solid #2a609d;
+    /* border-radius: 10px; */
+    cursor: pointer;
+    margin-top: 50px;
+    transition: all .3s ease 0s;
+}
+.news ul{
+    display: flex;
+    justify-content: space-between;
+}
+.news li{
+    flex: 1;
+    margin-right: 20px;
+    position: relative;
+}
+.news li:last-of-type{
+    margin-right: 0px;
+}
+.news li .imgFrame{overflow: hidden;}
+.news li:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.news li img{
+    width: 100%;
+    height: 265px;
+    object-fit: cover;
+    line-height: 0;
+    filter: grayscale(0.8);
+    transition: all .5s ease 0s;
+}
+.news li h3{
+    word-break: keep-all;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    height: 45px;
+}
+.news li p{
+    color: #666;
+    word-break: keep-all;
+    font-size: 16px;
+    line-height: 1.4;
+    height: 45px;
+    margin-bottom: 25px;
+}
+.news li span{
+    display: block;
+    text-align: right;
+    color: #2a609d;
+    font-size: 14px;
+}
+.news li:hover .newsTxt *{color: #fff;}
+.news li:hover .newsTxt h3{color: #2a609d;}
+.news li .newsTxt{
+    padding: 10px;
+    padding-bottom: 20px;
+    transition: all .5s ease 0s;
+}
+.news li:hover .newsTxt::after{height: 113px;}
+.news li .newsTxt::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2a609d;
+    transition: all .5s ease 0s;
+}
